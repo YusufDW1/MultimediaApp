@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="multimedia.PlayerController">
+    <center>
+        <StackPane>
+            <MediaView fx:id="mediaView" />
+        </StackPane>
+    </center>
+
+    <bottom>
+        <VBox spacing="5">
+            <Slider fx:id="progressSlider" />
+            <HBox spacing="10" alignment="CENTER" styleClass="control-bar">
+                <Button fx:id="btnOpen" text="📂" onAction="#handleOpen" />
+                <Button fx:id="btnBackward" text="⏪" onAction="#handleBackward" />
+                <Button fx:id="btnPlayPause" text="▶" onAction="#handlePlayPause" />
+                <Button fx:id="btnForward" text="⏩" onAction="#handleForward" />
+                <Button fx:id="btnStop" text="⏹" onAction="#handleStop" />
+                <Slider fx:id="volumeSlider" min="0" max="1" value="0.5" prefWidth="100" />
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
